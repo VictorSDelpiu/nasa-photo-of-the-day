@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import NasaCard from "./NasaCard";
 import axios from "axios";
 
-export default function NasaList() {
+ function NasaList() {
   const [pic, setPic] = useState([]);
 
   useEffect(() => {
@@ -21,14 +21,14 @@ export default function NasaList() {
 
   return (
     <div className="space">
-      {
         <NasaCard
           date={pic.date}
           explanation={pic.explanation}
           hdurl={pic.hdurl}
           title={pic.title}
         />
-      }
     </div>
   );
 }
+
+export default NasaList;
